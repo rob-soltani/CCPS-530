@@ -1,0 +1,86 @@
+* {
+  font-family: "Crimson Text", Tahoma, serif;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.cloud-service-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+#Instructor {
+  text-decoration: none;
+}
+
+#Instructor,
+#Instructor > span {
+  font-family: "Lato", Tahoma, serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+#Instructor > span {
+  color: red;
+}
+
+ol,
+ul {
+  display: inline-block;
+}
+
+ol > li,
+ul > li {
+  float: left;
+  text-align: left;
+}
+
+ul > li {
+  margin-bottom: 10px;
+}
+
+body {
+  text-align: center;
+}
+
+div {
+  width: 800px;
+  margin: auto;
+}
+
+div ul,
+div li,
+div p,
+div a {
+  font-size: 20px;
+}
+
+p,
+blockquote {
+  text-align: left;
+  font-size: 20px;
+}
+
+.paragraph-image {
+  width: 200px;
+  height: 200px;
+  margin-top: 15px;
+}
