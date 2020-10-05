@@ -49,7 +49,6 @@ ul {
 
 ol > li,
 ul > li {
-  float: left;
   text-align: left;
 }
 
