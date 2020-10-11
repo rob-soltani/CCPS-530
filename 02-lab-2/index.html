@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCPS 530 - Fall 2020 - Lab 2</title>
+    <link rel="icon" href="https://rob.soltani.io/wp-content/uploads/2020/02/soltani.io-favicon.ico"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <article class="body-container">
+        <div id="back-button-area">
+            <a href="https://ccps530.ru.rob.soltani.io/">
+                &lt;- Back to CCPS 530's Homepage</a>
+            <br />
+            <hr>
+        </div>
+
+        <div id="ryerson-area">
+            <img src="https://rob.soltani.io/wp-content/uploads/2020/09/Ryerson-rgb.png"
+                alt="Ryerson University Logo" />
+            <h2>
+                Faculty of Science<br />
+                Computer Science Department<br />
+                Undergraduate Program <br />
+                <br />
+                CCPS 530 - Web Systems Development - Fall 2020
+                <br />
+                Instructor:
+                <a class="Instructor" href="https://ghassem.com" target="_blank"><span>G</span>hassem
+                    <span>T</span>ofighi</a>
+            </h2>
+            <hr>
+        </div>
+
+        <div id="lab-into-area">
+            <h1><a href="https://rob.soltani.io">Rob (Sohrab) Soltani</a></h1>
+            <h1>Lab 2</h1>
+            <a href="https://github.com/rob-soltani/CCPS-530" target="_blank">
+                <img src="https://rob.soltani.io/wp-content/uploads/2020/01/GitHub-BW-80x80.png"
+                    style="width: 40px;height:40px;" alt="GitHub Logo" />
+            </a>
+            <hr>
+        </div>
+
+        <div id="topic-overview-area">
+            <h1>Rob's Favourite Web Development Technologies</h1>
+            <ul style="margin:auto">
+                <li>
+                    Front-End
+                    <br />
+                    <ol>
+                        <li>
+                            <a href="https://reactjs.org/" target="_blank">ReactJS</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/React-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 2px;" alt="ReactJS Logo" />
+                        </li>
+                        <li>
+                            <a href="https://angularjs.org/" target="_blank">AngularJS</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Angular-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 2px;" alt="AngularJS Logo" />
+                        </li>
+                        <li>
+                            <a href="https://vuejs.org/" target="_blank">VueJS</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Vue-JS-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 2px;" alt="VueJS Logo" />
+                        </li>
+                        <li>
+                            <a href="https://jquery.com/" target="_blank">jQuery</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/jQuery-80x80.png"
+                                class="web-tech-icon" alt="jQuery" />
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Back-End
+                    <br />
+                    <ol>
+                        <li>
+                            <a href="https://nodejs.org/" target="_blank">NodeJS</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Node.JS-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 5px;" alt="NodeJS icon" />
+                        </li>
+                        <li>
+                            <a href="https://expressjs.com/" target="_blank">Express</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/10/Node-JS-Express-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 5px;" alt="NodeJS Express Logo" />
+                        </li>
+                        <li>
+                            <a href="https://laravel.com/" target="_blank">Laravel</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Laravel-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 5px;" alt="Laravel Logo" />
+                        </li>
+                        <li>
+                            <a href="https://asp.net" target="_blank">ASP.NET</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/ASP.NET_-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 5px;" alt="ASP.NET Logo" />
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Database
+                    <br />
+                    <ol>
+                        <li><a href="https://www.mysql.com/" target="_blank" style="margin-bottom: 5px;">MySQL</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/MySQL-80x80.png"
+                                class="web-tech-icon" alt="My SQL Logo" />
+                        </li>
+                        <li>
+                            <a href="https://firebase.google.com/docs/firestore" target="_blank">Cloud Firestore</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/10/firebase-firestore-80x80.png"
+                                class="web-tech-icon" style="margin-bottom: 5px;" alt="Firebase Firestore Logo" />
+                        </li>
+                        <li><a href="https://www.microsoft.com/en-us/sql-server" target="_blank">Microsoft SQL
+                                Server</a>
+                            &nbsp;
+                            <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Microsoft-SQL-Server-80x80.png"
+                                class="web-tech-icon" alt="Microsoft SQL Logo" />
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+
+            <hr>
+        </div>
+
+        <div id="main-content-area">
+
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/React.png" class="paragraph-image"
+                            alt="ReactJS Logo" />
+                        <h2>ReactJS</h2>
+                        <blockquote>
+
+                            "React (also known as React.js or ReactJS) is an open-source, front end, JavaScript library
+                            for building user interfaces or UI components. It is maintained by Facebook and a community
+                            of
+                            individual developers and companies. React can be used as a base in the development of
+                            single-page
+                            or mobile applications. However, React is only concerned with rendering data to the DOM, and
+                            so
+                            creating React applications usually requires the use of additional libraries for state
+                            management
+                            and routing. Redux and React Router are respective examples of such libraries."
+                            [<a href="https://en.wikipedia.org/wiki/React_(web_framework)"
+                                target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Angular.png" class="paragraph-image"
+                            alt="AngularJS Logo" />
+                        <h2>AngularJS</h2>
+                        <blockquote>
+
+                            "Angular (commonly referred to as 'Angular 2+' or 'Angular v2 and above')
+                            is a TypeScript-based open-source web application framework led by the Angular
+                            Team at Google and by a community of individuals and corporations.
+                            Angular is a complete rewrite from the same team that built AngularJS."
+                            [<a href="https://en.wikipedia.org/wiki/Angular_(web_framework)"
+                                target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Vue-JS.png" class="paragraph-image"
+                            alt="VueJS Logo" />
+                        <h2>VueJS</h2>
+                        <blockquote>
+
+                            "Vue.js (commonly referred to as Vue; pronounced /vjuː/, like 'view') is an open-source
+                            model–view–viewmodel front end JavaScript framework for building user interfaces and
+                            single-page applications. It was created by Evan You, and is maintained by him
+                            and the rest of the active core team members coming from various companies such as Netlify
+                            and Netguru."
+                            [<a href="https://en.wikipedia.org/wiki/Vue.js" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="https://rob.soltani.io/wp-content/uploads/2020/02/jQuery.png"
+                            class="paragraph-image" alt="jQuery Logo" />
+                        <h2>jQuery</h2>
+                        <blockquote>
+
+                            "jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and
+                            manipulation,
+                            as well as event handling, CSS animation, and Ajax. It is free, open-source software using
+                            the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10 million most
+                            popular websites. Web analysis indicates that it is the most widely deployed JavaScript
+                            library
+                            by a large margin, having at least 3 to 4 times more usage than any other JavaScript
+                            library."
+
+                            [<a href="https://en.wikipedia.org/wiki/JQuery" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Node.JS.png" class="paragraph-image"
+                            alt="NodeJS Logo" />
+                        <h2>NodeJS</h2>
+                        <blockquote>
+
+                            "Node.js is an open-source, cross-platform, back-end, JavaScript runtime environment that
+                            executes
+                            JavaScript code outside a web browser. Node.js lets developers use JavaScript to write
+                            command line
+                            tools and for server-side scripting—running scripts server-side to produce dynamic web page
+                            content
+                            before the page is sent to the user's web browser. Consequently, Node.js represents a
+                            'JavaScript
+                            everywhere' paradigm, unifying web-application development around a single programming
+                            language,
+                            rather than different languages for server- and client-side scripts."
+                            [<a href="https://en.wikipedia.org/wiki/Node.js" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/10/Node-JS-Express.png"
+                            class="paragraph-image" alt="Express Logo" />
+                        <h2>Express</h2>
+                        <blockquote>
+
+                            "Express.js, or simply Express, is a back end web application framework for Node.js,
+                            released as
+                            free and open-source software under the MIT License. It is designed for building web
+                            applications
+                            and APIs. It has been called the de facto standard server framework for Node.js"
+                            [<a href="https://en.wikipedia.org/wiki/Express.js" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Laravel.png" class="paragraph-image"
+                            alt="Laravel Logo" />
+                        <h2>Laravel</h2>
+                        <blockquote>
+
+                            "Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for
+                            the development of web applications following the model–view–controller (MVC) architectural
+                            pattern and based on Symfony. Some of the features of Laravel are a modular packaging system
+                            with a dedicated dependency manager, different ways for accessing relational databases,
+                            utilities that aid in application deployment and maintenance, and its orientation toward
+                            syntactic sugar. The source code of Laravel is hosted on GitHub and licensed under the terms
+                            of MIT License"
+                            [<a href="https://en.wikipedia.org/wiki/Laravel" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/ASP.NET_.png" alt="ASP.NET Logo"
+                            class="paragraph-image" />
+                        <h2>ASP.NET</h2>
+                        <blockquote>
+
+                            "ASP.NET is an open-source, server-side web-application framework designed
+                            for web development to produce dynamic web pages. It was developed by
+                            Microsoft to allow programmers to build dynamic web sites, applications and services.
+                            It was first released in January 2002 with version 1.0 of the .NET Framework and is
+                            the successor to Microsoft's Active Server Pages (ASP) technology. ASP.NET is
+                            built on the Common Language Runtime (CLR), allowing programmers to write ASP.NET
+                            code using any supported .NET language. The ASP.NET SOAP extension framework
+                            allows ASP.NET components to process SOAP messages"
+
+                            [<a href="https://en.wikipedia.org/wiki/ASP.NET" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/MySQL.png" class="paragraph-image"
+                            alt="MySQL Logo" />
+                        <h2>MySQL</h2>
+                        <blockquote>
+
+                            "MySQL (/ˌmaɪˌɛsˌkjuːˈɛl/ 'My S-Q-L')[5] is an open-source relational database management
+                            system
+                            (RDBMS).
+                            Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and
+                            'SQL',
+                            the abbreviation for Structured Query Language. A relational database organizes data into
+                            one or more
+                            data
+                            tables in which data types may be related to each other; these relations help structure the
+                            data.
+                            SQL is a language programmers use to create, modify and extract data from the relational
+                            database,
+                            as well as control user access to the database. In addition to relational databases and SQL,
+                            an RDBMS
+                            like
+                            MySQL
+                            works with an operating system to implement a relational database in a computer's storage
+                            system,
+                            manages users, allows for network access and facilitates testing database integrity and
+                            creation of
+                            backups.
+                            MySQL has stand-alone clients that allow users to interact directly with a MySQL database
+                            using SQL, but more often MySQL is used with other programs to implement applications that
+                            need relational database capability. MySQL is a component of the LAMP web application
+                            software stack (and others), which is an acronym for Linux, Apache, MySQL, Perl/PHP/Python.
+                            MySQL is used by many database-driven web applications, including Drupal, Joomla, phpBB, and
+                            WordPress. MySQL is also used by many popular websites, including Facebook, Flickr,
+                            MediaWiki,
+                            Twitter,and YouTube"
+
+                            [<a href="https://en.wikipedia.org/wiki/MySQL" target="_blank">Wikipedia</a>].
+                        </blockquote>
+                    </td>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/10/firebase-firestore.png"
+                            class="paragraph-image" alt="Firebase Firestore Logo" />
+                        <h2>Cloud Firestore</h2>
+                        <blockquote>
+
+                            "Cloud Firestore is a flexible, scalable database for mobile, web, and server development
+                            from Firebase
+                            and
+                            Google Cloud Platform. Like Firebase Realtime Database, it keeps your data in sync across
+                            client apps
+                            through
+                            realtime listeners and offers offline support for mobile and web so you can build responsive
+                            apps that
+                            work
+                            regardless of network latency or Internet connectivity. Cloud Firestore also offers seamless
+                            integration
+                            with other
+                            Firebase and Google Cloud Platform products, including Cloud Functions"
+                            [<a href="https://firebase.google.com/docs/firestore" target="_blank">Cloud Firestore
+                                Docs</a>].
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fifty-percent">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Microsoft-SQL-Server.png"
+                            class="paragraph-image" alt="Microsoft SQL Server Logo" />
+                        <h2>Microsoft SQL Server</h2>
+                        <blockquote>
+
+                            "Microsoft SQL Server is a relational database management system developed by Microsoft.
+                            As a database server, it is a software product with the primary function of storing and
+                            retrieving data
+                            as
+                            requested by other software applications—which may run either on the same computer or on
+                            another
+                            computer
+                            across a network (including the Internet). Microsoft markets at least a dozen different
+                            editions of
+                            Microsoft SQL Server, aimed at different audiences and for workloads ranging from small
+                            single-machine
+                            applications to large Internet-facing applications with many concurrent users."
+
+                            [<a href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server"
+                                target="_blank">Wikipedia</a>].
+
+                        </blockquote>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/02/CSS-3.png"
+                            class="paragraph-image css3-logo" alt="CSS3 Logo" />
+                        <h2 class="css3-title">CSS3</h2>
+                        <blockquote>
+
+                            "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+                            of a document written in a markup language such as HTML. CSS is a cornerstone technology of
+                            the World Wide Web,
+                            alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and
+                            content,
+                            including layout, colors, and fonts. This separation can improve content accessibility,
+                            provide more
+                            flexibility and control in the specification of presentation characteristics, enable
+                            multiple web
+                            pages to share formatting by specifying the relevant CSS in a separate .css file which
+                            reduces
+                            complexity and repetition in the structural content as well as enabling the .css file to be
+                            cached
+                            to improve the page load speed between the pages that share the file and its formatting"
+
+                            <br />
+                            [<a href="https://en.wikipedia.org/wiki/CSS" target="_blank">Wikipedia</a>].
+
+                        </blockquote>
+                        <br />
+                        <div class="css3-wordwrap">
+                            "Let's try CSS3 <i>'word-wrap: break-word;'</i> by using a very
+                            loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
+                            word"
+                        </div>
+                        <br />
+                        <div>
+                            This is a selectable text.
+                        </div>
+                        <br />
+                        <div class='css3-user-select'>
+                            This is not a selectable text due to CSS3 <i>'user-select: none;'</i>.
+                        </div>
+                        <br />
+                        Trying out CSS3 <i>'display: flex;'</i> and <i>'flex-direction: row-reverse;'</i>:
+                        <br />
+                        <div class='css3-flex'>
+                            <div>
+                                Row 1
+                            </div>
+                            <div>
+                                Row 2
+                            </div>
+                            <div>
+                                Row 3
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            </table>
+
+            <hr>
+        </div>
+
+    </article>
+
+    <div id="footer-area">
+        Page last updated on October 11<sup>th</sup>, 2020, by Rob Soltani
+        <p class="jigsaw-logo-container">
+            <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ccps530.ru.rob.soltani.io/lab2/"
+                target="_blank">
+                <img class="jigsaw-logo" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+            </a>
+        </p>
+
+    </div>
+
+
+
+</body>
+
+</html>

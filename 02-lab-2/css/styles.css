@@ -16,7 +16,7 @@ h2 {
   font-size: 20px;
 }
 
-.cloud-service-icon {
+.web-tech-icon {
   width: 20px;
   height: 20px;
   vertical-align: text-bottom;
@@ -30,15 +30,43 @@ a:active,
   text-decoration: none;
 }
 
-#Instructor,
-#Instructor > span {
+.css3-title {
+  text-shadow: 1px 1px rgba(28, 32, 66, 0.2); /* CSS 3 */
+}
+
+.css3-logo {
+  transform: rotate(45deg); /* CSS 3 */
+}
+
+.css3-wordwrap {
+  word-wrap: break-word; /* CSS 3 */
+  width: 200px;
+  margin: auto;
+}
+
+.css3-user-select {
+  user-select: none; /* CSS 3 */
+}
+
+.css3-flex {
+  display: flex; /* CSS 3 */
+  flex-direction: row-reverse; /* CSS 3 */
+}
+
+.css3-flex > div {
+  width: 50px;
+  height: 50px;
+}
+
+.Instructor,
+.Instructor > span {
   font-family: "Lato", Tahoma, serif;
   text-transform: uppercase;
   letter-spacing: -1px;
   text-decoration: none;
 }
 
-#Instructor > span {
+.Instructor > span {
   color: red;
 }
 
@@ -60,8 +88,8 @@ body {
   text-align: center;
 }
 
-div {
-  width: 800px;
+.body-container {
+  max-width: 900px;
   margin: auto;
 }
 
@@ -82,4 +110,19 @@ blockquote {
   width: 200px;
   height: 200px;
   margin-top: 15px;
+}
+
+.jigsaw-logo-container {
+  text-align: center;
+}
+
+.jigsaw-logo {
+  border: 0;
+  width: 88px;
+  height: 31px;
+}
+
+td.fifty-percent {
+  width: 50%;
+  vertical-align: top;
 }
