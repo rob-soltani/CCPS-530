@@ -17,12 +17,6 @@ h2 {
   font-size: 20px;
 }
 
-.web-tech-icon {
-  width: 20px;
-  height: 20px;
-  vertical-align: text-bottom;
-}
-
 a:link,
 a:visited,
 a:hover,
@@ -31,33 +25,6 @@ a:active,
   text-decoration: none;
 }
 
-.css3-title {
-  text-shadow: 1px 1px rgba(28, 32, 66, 0.2); /* CSS 3 */
-}
-
-.css3-logo {
-  transform: rotate(45deg); /* CSS 3 */
-}
-
-.css3-wordwrap {
-  word-wrap: break-word; /* CSS 3 */
-  width: 200px;
-  margin: auto;
-}
-
-.css3-user-select {
-  user-select: none; /* CSS 3 */
-}
-
-.css3-flex {
-  display: flex; /* CSS 3 */
-  flex-direction: row-reverse; /* CSS 3 */
-}
-
-.css3-flex > div {
-  width: 50px;
-  height: 50px;
-}
 
 .Instructor,
 .Instructor > span {
@@ -71,27 +38,9 @@ a:active,
   color: red;
 }
 
-ol,
-ul {
-  display: inline-block;
-}
-
-ol > li,
-ul > li {
-  text-align: left;
-}
-
-ul > li {
-  margin-bottom: 10px;
-}
 
 body {
   text-align: center;
-}
-
-.body-container {
- 
-  margin: auto;
 }
 
 div ul,
@@ -107,11 +56,6 @@ blockquote {
   font-size: 20px;
 }
 
-.paragraph-image {
-  width: 200px;
-  height: 200px;
-  margin-top: 15px;
-}
 
 .jigsaw-logo-container {
   text-align: center;
