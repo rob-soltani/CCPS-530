@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCPS 530 - Fall 2020 - Lab 3 - Bootstrap and jQuery</title>
+    <link rel="icon" href="https://rob.soltani.io/wp-content/uploads/2020/02/soltani.io-favicon.ico"
+        type="image/x-icon" />
+
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100">
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body class="mt-0 p-0">
+
+    <div class="container container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#004c9b" id="Navigation">
+            <a class="navbar-brand d-block d-lg-none" href="#">CCPS 530 - Lab 3</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="#UniversityInfo" class="nav-link" id="MenuItem_Top">Top</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#CourseInfo" class="nav-link" id="MenuItem_CourseInfo">Course Info</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Favourite Web Dev
+                            Techs</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#FrontEnd" id="MenuItem_FrontEnd">Front-End</a>
+                            <a class="dropdown-item" href="#BackEnd" id="MenuItem_BackEnd">Back-End</a>
+                            <a class="dropdown-item" href="#Database" id="MenuItem_Database">Database</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#PageInfo" id="MenuItem_PageInfo">Page Info</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="navbar-nav ml-auto">
+                    <a href="https://ccps530.ru.rob.soltani.io/" class="nav-item nav-link">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to CCPS 530's Homepage
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row" id="UniversityInfo">
+
+            <div class="col-lg-12">
+                <br />
+                <h1 class="font-weight-bold">University and Program Information</h1>
+            </div>
+
+            <div class="col-lg-12">
+                <br />
+                <div id="ryerson-area" class="text-center">
+
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/09/Ryerson-rgb.png"
+                        alt="Ryerson University Logo" />
+                    <h2 class="font-weight-bold">
+                        <br />
+                        Faculty of Science<br />
+                        Computer Science Department<br />
+                        Undergraduate Program <br />
+                    </h2>
+                    <br />
+                    <blockquote style="max-width:700px" class="m-auto">
+                        "As a teaching discipline, science has long been an integral part of
+                        the Ryerson community. With the university being located in the heart
+                        of downtown Toronto, we are uniquely positioned to lead the science world
+                        in education and research. In addition to our studies in class, we hop
+                        to add value to the education of students by engaging them in prolific
+                        research projects in cooperation with our accomplished faculty members.
+                        The Faculty of Science is committed to interdisciplinary teaching and
+                        research across our four departments - physics, chemistry and biology,
+                        computer science, and mathematics - to prepare our students for a career
+                        in the lab, the emergency room, and beyond."
+                    </blockquote>
+                    [<a href="https://www.ryerson.ca/science/about/" target="_blank">Faculty of Science Website</a>]
+
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="CourseInfo">
+
+            <div class="col-lg-12">
+                <br />
+                <h1 class="font-weight-bold">Course Information</h1>
+            </div>
+
+            <div class="col-lg-12">
+                <div id="ryerson-area" class="text-center">
+
+                    <h2 class="font-weight-bold">
+                        CCPS 530 - Web Systems Development - Fall 2020
+                        <br />
+                        Instructor:
+                        <a class="Instructor" href="https://ghassem.com" target="_blank"><span>G</span>hassem
+                            <span>T</span>ofighi</a>
+                    </h2>
+                    <br />
+                    <br />
+                    <blockquote style="max-width:700px" class="m-auto">
+                        <strong>Course Description</strong><br />
+                        "This course presents the concepts and applications of the technologies
+                        to design and develop creative and successful web services. It covers design
+                        fundamentals and also programming languages for both server-side and
+                        client-side environments. Responsive design, search engine optimization and
+                        monetization strategies are also introduced."
+                    </blockquote>
+                    <br />
+                    <blockquote style="max-width:700px" class="m-auto">
+                        <strong>Requisites</strong><br />
+                        "Prerequisite: CCPS 209"
+                    </blockquote>
+                    [<a href="https://continuing.ryerson.ca/search/publicCourseSearchDetails.do?method=load&courseId=24503"
+                        target="_blank">Chang School Website</a>]
+
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="LabInfo">
+            <div class="col-lg-12">
+
+                <div id="lab-into-area">
+                    <h1 class="font-weight-bold"><a href="https://rob.soltani.io">Rob (Sohrab) Soltani</a></h1>
+                    <h1 class="font-weight-bold">Lab 3 - Bootstrap and jQuery</h1>
+                    <a href="https://github.com/rob-soltani/CCPS-530" target="_blank">
+                        <img src="https://rob.soltani.io/wp-content/uploads/2020/01/GitHub-BW-80x80.png"
+                            style="width: 40px;height:40px;" alt="GitHub Logo" />
+                    </a>
+                </div>
+
+                <hr>
+            </div>
+        </div>
+
+        <div class="row" id="FrontEnd">
+            <div class="col-lg-12">
+
+                <h1 class="font-weight-bold">Rob's Favourite Front End Technologies</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/React.png" class="card-img-top p-5"
+                        alt="ReactJS Logo">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">ReactJS</h5>
+                        <blockquote class="card-text">
+                            "React (also known as React.js or ReactJS) is an open-source, front end,
+                            JavaScript library
+                            for building user interfaces or UI components. It is maintained by Facebook and
+                            a community
+                            of
+                            individual developers and companies. React can be used as a base in the
+                            development of
+                            single-page
+                            or mobile applications. However, React is only concerned with rendering data to
+                            the DOM, and
+                            so
+                            creating React applications usually requires the use of additional libraries for
+                            state
+                            management
+                            and routing. Redux and React Router are respective examples of such libraries."
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">[<a
+                                href="https://en.wikipedia.org/wiki/React_(web_framework)" class="card-link"
+                                target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Angular.png" class="card-img-top p-5"
+                        alt="AngularJS Logo">
+                    <div class="card-body">
+                        <h5 class="card-title  font-weight-bold">AngularJS</h5>
+                        <blockquote class="card-text">
+                            "Angular (commonly referred to as 'Angular 2+' or 'Angular v2 and above')
+                            is a TypeScript-based open-source web application framework led by the Angular
+                            Team at Google and by a community of individuals and corporations.
+                            Angular is a complete rewrite from the same team that built AngularJS."
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            [<a href="https://en.wikipedia.org/wiki/Angular_(web_framework)" class="card-link"
+                                target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Vue-JS.png" class="card-img-top p-5"
+                        alt="VueJS Logo">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">VueJS</h5>
+                        <blockquote class="card-text">
+                            "Vue.js (commonly referred to as Vue; pronounced /vjuː/, like 'view') is an
+                            open-source
+                            model–view–viewmodel front end JavaScript framework for building user interfaces
+                            and
+                            single-page applications. It was created by Evan You, and is maintained by him
+                            and the rest of the active core team members coming from various companies such
+                            as Netlify
+                            and Netguru."
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">[<a href="https://en.wikipedia.org/wiki/Vue.js"
+                                class="card-link" target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/jQuery.png" class="card-img-top p-5"
+                        alt="jQuery Logo">
+                    <div class="card-body">
+                        <h5 class="card-title  font-weight-bold">jQuery</h5>
+                        <blockquote class="card-text">
+                            "jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and
+                            manipulation,
+                            as well as event handling, CSS animation, and Ajax. It is free, open-source
+                            software using
+                            the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10
+                            million most
+                            popular websites. Web analysis indicates that it is the most widely deployed
+                            JavaScript
+                            library
+                            by a large margin, having at least 3 to 4 times more usage than any other
+                            JavaScript
+                            library."
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            [<a href="https://en.wikipedia.org/wiki/JQuery" class="card-link"
+                                target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" id="BackEnd">
+            <div class="col-lg-12">
+
+                <hr>
+                <h1 class="font-weight-bold">Rob's Favourite Back End Technologies</h1>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Node.JS.png" class="card-img-top p-5"
+                        alt="NodeJS Logo">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">NodeJS</h5>
+                        <blockquote class="card-text">
+                            "Node.js is an open-source, cross-platform, back-end, JavaScript runtime
+                            environment that
+                            executes
+                            JavaScript code outside a web browser. Node.js lets developers use JavaScript to
+                            write
+                            command line
+                            tools and for server-side scripting—running scripts server-side to produce
+                            dynamic web page
+                            content
+                            before the page is sent to the user's web browser. Consequently, Node.js
+                            represents a
+                            'JavaScript
+                            everywhere' paradigm, unifying web-application development around a single
+                            programming
+                            language,
+                            rather than different languages for server- and client-side scripts."
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">[<a href="https://en.wikipedia.org/wiki/Node.js"
+                                class="card-link" target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/10/Node-JS-Express.png"
+                        class="card-img-top p-5" alt="Express Logo">
+                    <div class="card-body">
+                        <h5 class="card-title  font-weight-bold">Express</h5>
+                        <blockquote class="card-text">
+                            "Express.js, or simply Express, is a back end web application framework for
+                            Node.js,
+                            released as
+                            free and open-source software under the MIT License. It is designed for building
+                            web
+                            applications
+                            and APIs. It has been called the de facto standard server framework for Node.js"
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            [<a href="https://en.wikipedia.org/wiki/Express.js" class="card-link"
+                                target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Laravel.png" class="card-img-top p-5"
+                        alt="Laravel Logo">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Laravel</h5>
+                        <blockquote class="card-text">
+                            "Laravel is a free, open-source PHP web framework, created by Taylor Otwell and
+                            intended for
+                            the development of web applications following the model–view–controller (MVC)
+                            architectural
+                            pattern and based on Symfony. Some of the features of Laravel are a modular
+                            packaging system
+                            with a dedicated dependency manager, different ways for accessing relational
+                            databases,
+                            utilities that aid in application deployment and maintenance, and its
+                            orientation toward
+                            syntactic sugar. The source code of Laravel is hosted on GitHub and licensed
+                            under the terms
+                            of MIT License"
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">[<a href="https://en.wikipedia.org/wiki/Laravel"
+                                class="card-link" target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/ASP.NET_.png" class="card-img-top p-5"
+                        alt="ASP.NET Logo">
+                    <div class="card-body">
+                        <h5 class="card-title  font-weight-bold">ASP.NET</h5>
+                        <blockquote class="card-text">
+                            "ASP.NET is an open-source, server-side web-application framework designed
+                            for web development to produce dynamic web pages. It was developed by
+                            Microsoft to allow programmers to build dynamic web sites, applications and
+                            services.
+                            It was first released in January 2002 with version 1.0 of the .NET Framework and
+                            is
+                            the successor to Microsoft's Active Server Pages (ASP) technology. ASP.NET is
+                            built on the Common Language Runtime (CLR), allowing programmers to write
+                            ASP.NET
+                            code using any supported .NET language. The ASP.NET SOAP extension framework
+                            allows ASP.NET components to process SOAP messages"
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            [<a href="https://en.wikipedia.org/wiki/ASP.NET" class="card-link"
+                                target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" id="Database">
+            <div class="col-lg-12">
+
+                <hr>
+                <h1 class="font-weight-bold">Rob's Favourite Database Technologies</h1>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/MySQL.png" class="card-img-top p-5"
+                        alt="MySQL Logo">
+
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">MySQL</h5>
+                        <blockquote class="card-text">
+                            "MySQL (/ˌmaɪˌɛsˌkjuːˈɛl/ 'My S-Q-L')[5] is an open-source relational database
+                            management
+                            system
+                            (RDBMS).
+                            Its name is a combination of 'My', the name of co-founder Michael Widenius's
+                            daughter, and
+                            'SQL',
+                            the abbreviation for Structured Query Language. A relational database organizes
+                            data into
+                            one or more
+                            data
+                            tables in which data types may be related to each other; these relations help
+                            structure the
+                            data.
+                            SQL is a language programmers use to create, modify and extract data from the
+                            relational
+                            database,
+                            as well as control user access to the database. In addition to relational
+                            databases and SQL,
+                            an RDBMS
+                            like
+                            MySQL
+                            works with an operating system to implement a relational database in a
+                            computer's storage
+                            system,
+                            manages users, allows for network access and facilitates testing database
+                            integrity and
+                            creation of
+                            backups."
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">[<a href="https://en.wikipedia.org/wiki/MySQL"
+                                class="card-link" target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/10/firebase-firestore.png"
+                        class="card-img-top p-5" alt="Firebase Firestore Logo">
+
+                    <div class="card-body">
+                        <h5 class="card-title  font-weight-bold">Firebase Firestore</h5>
+                        <blockquote class="card-text">
+                            "Cloud Firestore is a flexible, scalable database for mobile, web, and server
+                            development
+                            from Firebase
+                            and
+                            Google Cloud Platform. Like Firebase Realtime Database, it keeps your data in
+                            sync across
+                            client apps
+                            through
+                            realtime listeners and offers offline support for mobile and web so you can
+                            build responsive
+                            apps that
+                            work
+                            regardless of network latency or Internet connectivity. Cloud Firestore also
+                            offers seamless
+                            integration
+                            with other
+                            Firebase and Google Cloud Platform products, including Cloud Functions"
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">
+                            [<a href="https://firebase.google.com/docs/firestore" class="card-link"
+                                target="_blank">Cloud
+                                Firestore
+                                Docs</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch mt-3 mb-3">
+
+                <div class="card" style="width: 100%;">
+
+                    <img src="https://rob.soltani.io/wp-content/uploads/2020/02/Microsoft-SQL-Server.png"
+                        class="card-img-top p-5" alt="Microsoft SQL Server Logo">
+
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Microsoft SQL Server</h5>
+                        <blockquote class="card-text">
+                            "Microsoft SQL Server is a relational database management system developed by
+                            Microsoft.
+                            As a database server, it is a software product with the primary function of
+                            storing and
+                            retrieving data
+                            as
+                            requested by other software applications—which may run either on the same
+                            computer or on
+                            another
+                            computer
+                            across a network (including the Internet). Microsoft markets at least a dozen
+                            different
+                            editions of
+                            Microsoft SQL Server, aimed at different audiences and for workloads ranging
+                            from small
+                            single-machine
+                            applications to large Internet-facing applications with many concurrent users."
+
+                        </blockquote>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center">[<a
+                                href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server" class="card-link"
+                                target="_blank">Wikipedia</a>]</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row" id="footer">
+            <div class="col-lg-12">
+                <hr>
+                <div id="footer-area">
+                    Page last updated on October 25<sup>th</sup>, 2020, by Rob Soltani
+                    <p class="jigsaw-logo-container">
+                        <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ccps530.ru.rob.soltani.io/lab3/"
+                            target="_blank">
+                            <img class="jigsaw-logo" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                                alt="Valid CSS!" />
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
+
+    <script>
+
+
+        function scrollToElement(TheElementID) {
+            var el = $("#" + TheElementID);
+            var elOffset = el.offset().top;
+            var elHeight = el.height();
+            var windowHeight = $(window).height();
+            var offset;
+
+            if (elHeight < windowHeight) {
+                offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+            }
+            else {
+                offset = elOffset;
+            }
+
+            $.smoothScroll({ speed: 700 }, offset);
+            return false;
+        }
+
+
+        let ListOfMenuItems = ["MenuItem_Top",
+            "MenuItem_CourseInfo",
+            "MenuItem_FrontEnd",
+            "MenuItem_BackEnd",
+            "MenuItem_Database",
+            "MenuItem_PageInfo"];
+
+
+        let ListOfMenuItemDestinations = {};
+
+        ListOfMenuItemDestinations["MenuItem_Top"] = 'UniversityInfo';
+        ListOfMenuItemDestinations["MenuItem_CourseInfo"] = 'CourseInfo';
+        ListOfMenuItemDestinations["MenuItem_FrontEnd"] = 'FrontEnd';
+        ListOfMenuItemDestinations["MenuItem_BackEnd"] = 'BackEnd';
+        ListOfMenuItemDestinations["MenuItem_Database"] = 'Database';
+        ListOfMenuItemDestinations["MenuItem_PageInfo"] = 'PageInfo';
+
+
+        $(".navbar a").on("click", function () {
+
+            let TheID = $(this).attr('id');
+
+            if (TheID === "MenuItem_FrontEnd" ||
+                TheID === "MenuItem_BackEnd"  ||
+                TheID === "MenuItem_Database" ||
+                TheID === "MenuItem_PageInfo") {
+                $(".navbar").find(".active").removeClass("active");
+                $("#navbarDropdown").parent().addClass("active");
+            }
+            else if (!(TheID === "navbarDropdown")) {
+                $(".navbar").find(".active").removeClass("active");
+                $(this).parent().addClass("active");
+            }
+
+        });
+
+
+
+        ListOfMenuItems.forEach(MenuItem => {
+
+            $("#" + MenuItem).click(function () {
+
+                if (MenuItem === "MenuItem_Top") {
+                    $('html,body').animate({ scrollTop: 0 }, 'slow');
+                }
+                else if (MenuItem === "MenuItem_PageInfo") {
+                    $('html,body').animate({ scrollTop: $(document).height() }, 'slow');
+                }
+                else {
+                    scrollToElement(ListOfMenuItemDestinations[MenuItem]);
+                }
+
+            });
+
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
