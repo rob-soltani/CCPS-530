@@ -1,0 +1,68 @@
+* {
+  font-family: "Crimson Text", Tahoma, serif;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 25px;
+  
+}
+
+h2 {
+  font-size: 20px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+#Instructor {
+  text-decoration: none;
+}
+
+
+.Instructor,
+.Instructor > span {
+  font-family: "Lato", Tahoma, serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.Instructor > span {
+  color: red;
+}
+
+
+body {
+  text-align: center;
+}
+
+div ul,
+div li,
+div p,
+div a {
+  font-size: 20px;
+}
+
+p,
+blockquote {
+  text-align: left;
+  font-size: 20px;
+}
+
+
+.jigsaw-logo-container {
+  text-align: center;
+}
+
+.jigsaw-logo {
+  border: 0;
+  width: 88px;
+  height: 31px;
+}
