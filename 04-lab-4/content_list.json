@@ -1,0 +1,42 @@
+[
+  {
+    "ImageURL": "https://rob.soltani.io/wp-content/uploads/2020/02/React.png",
+    "ImageAlt": "ReactJS Logo",
+    "Title": "ReactJS",
+    "Description": "content/01 ReactJs.html",
+    "CitationTitle": "Wikipedia",
+    "CitattionURL": "https://en.wikipedia.org/wiki/React_(web_framework)"
+  },
+  {
+    "ImageURL": "https://rob.soltani.io/wp-content/uploads/2020/02/Angular.png",
+    "ImageAlt": "AngularJS Logo",
+    "Title": "AngularJS",
+    "Description": "content/02 AngularJS.html",
+    "CitationTitle": "Wikipedia",
+    "CitattionURL": "https://en.wikipedia.org/wiki/Angular_(web_framework)"
+  },
+  {
+    "ImageURL": "https://rob.soltani.io/wp-content/uploads/2020/02/Vue-JS.png",
+    "ImageAlt": "VueJS Logo",
+    "Title": "VueJS",
+    "Description": "content/03 VueJS.html",
+    "CitationTitle": "Wikipedia",
+    "CitattionURL": "https://en.wikipedia.org/wiki/Vue.js"
+  },
+  {
+    "ImageURL": "https://rob.soltani.io/wp-content/uploads/2020/02/jQuery.png",
+    "ImageAlt": "jQuery Logo",
+    "Title": "jQuery",
+    "Description": "content/04 jQuery.html",
+    "CitationTitle": "Wikipedia",
+    "CitattionURL": "https://en.wikipedia.org/wiki/JQuery"
+  },
+  {
+    "ImageURL": "https://rob.soltani.io/wp-content/uploads/2020/02/Node.JS.png",
+    "ImageAlt": "NodeJS Logo",
+    "Title": "NodeJS",
+    "Description": "content/05 NodeJS.html",
+    "CitationTitle": "Wikipedia",
+    "CitattionURL": "https://en.wikipedia.org/wiki/Node.js"
+  }
+]
