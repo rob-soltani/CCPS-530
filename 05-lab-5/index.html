@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CCPS 530 - Fall 2020 - Lab 4 - AJAX and DOM</title>
+    <title>CCPS 530 - Fall 2020 - Lab 5 - JSON and DOM</title>
     <link rel="icon" href="https://rob.soltani.io/wp-content/uploads/2020/02/soltani.io-favicon.ico"
         type="image/x-icon" />
 
@@ -23,64 +23,77 @@
 
 <body class="mt-0 p-0">
 
-    <div class="container container-fluid">
+    <a href="https://ccps530.ru.rob.soltani.io/">
+        &lt;- Back to CCPS 530's Homepage</a>
+    <br />
 
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#004c9b" id="Navigation">
-            <a class="navbar-brand d-block d-lg-none" href="#">CCPS 530 - Lab 4</a>
+    <div class="container container-fluid ">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a href="#MyFavouriteWebDevTechs" class="nav-link" id="MenuItem_MyFavouriteWebDevTechs">My
-                            Favourite Web Dev
-                            Techs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#LabInfo" class="nav-link" id="MenuItem_LabInfo">Lab Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#CourseInfo" class="nav-link" id="MenuItem_CourseInfo">Course Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#UniversityInfo" class="nav-link" id="MenuItem_UniversityInfo">University Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#PageInfo" class="nav-link" id="MenuItem_PageInfo">Page Info</a>
-                    </li>
-
-                </ul>
-                <div class="navbar-nav ml-auto">
-                    <a href="https://ccps530.ru.rob.soltani.io/" class="nav-item nav-link">
-                        <i class="fas fa-arrow-left"></i>
-                        Back to CCPS 530's Homepage
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-
-
-        <div class="row justify-content-lg-center" id="MyFavouriteWebDevTechs">
+        <div class="row justify-content-lg-center">
             <div class="col-lg-12">
                 <br />
-                <h1 class="font-weight-bold">Rob's Favourite Web Technologies</h1>
+                <h1 class="font-weight-bold">Rob's Salad Bowl of Favourite Personalities</h1>
             </div>
         </div>
 
-        <div>Web technology changing in (<span id="Timer">20</span>) seconds.</div>
+        <div class="row justify-content-lg-center" id="MyFavouritePersonalities">
+
+        </div>
+
+        <div class="row justify-content-lg-center">
+            <div class="col-lg-12">
+                <hr>
+                <br />
+                <h1 class="font-weight-bold">The "Must be Consumed" JSON</h1>
+            </div>
+
+            <div class="col-lg-12 mt-3 mb-3" id="MusctConsumeJSONCard">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <div class="card-img p-5">
+                                <img src="https://rob.soltani.io/wp-content/uploads/2020/09/Ryerson-rgb.png" alt="Placeholder Alt Text" class="card-img p-0">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-5">
+                                <h4 class="card-title font-weight-bold text-left JSON_Name">{{PlaceHolder Title}}</h4>
+                                <p>
+                                    Year: <span class="JSON_Year"></span>
+                                    <br />
+                                    Engine:
+                                </p>
+                                <ul>
+                                    <li class="JSON_Engine_type text-left"></li>
+                                    <li class="JSON_Engine_size text-left"></li>
+                                    <li class="JSON_Engine_configuration text-left"></li>
+                                </ul>
+
+                                <p>
+                                    Brakes:
+                                </p>
+                                <ul>
+                                    <li class="JSON_Brakes_front text-left"></li>
+                                    <li class="JSON_Brakes_back text-left"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
 
         <div class="row" id="LabInfo">
             <div class="col-lg-12">
-                
+
                 <hr>
                 <div id="lab-into-area">
                     <h1 class="font-weight-bold"><a href="https://rob.soltani.io">Rob (Sohrab) Soltani</a></h1>
-                    <h1 class="font-weight-bold">Lab 4 - AJAX and DOM</h1>
+                    <h1 class="font-weight-bold">Lab 5 - JSON and DOM</h1>
                     <a href="https://github.com/rob-soltani/CCPS-530" target="_blank">
                         <img src="https://rob.soltani.io/wp-content/uploads/2020/01/GitHub-BW-80x80.png"
                             style="width: 40px;height:40px;" alt="GitHub Logo" />
@@ -180,9 +193,9 @@
             <div class="col-lg-12">
                 <hr>
                 <div id="footer-area">
-                    Page last updated on October 28<sup>th</sup>, 2020, by Rob Soltani
+                    Page last updated on November 7<sup>th</sup>, 2020, by Rob Soltani
                     <p class="jigsaw-logo-container">
-                        <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ccps530.ru.rob.soltani.io/lab4/"
+                        <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://ccps530.ru.rob.soltani.io/lab5/"
                             target="_blank">
                             <img class="jigsaw-logo" src="https://jigsaw.w3.org/css-validator/images/vcss"
                                 alt="Valid CSS!" />
@@ -208,73 +221,30 @@
     <script
         src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
 
+
+
     <script>
 
+        // Taken from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
-        function scrollToElement(TheElementID) {
-            var el = $("#" + TheElementID);
-            var elOffset = el.offset().top;
-            var elHeight = el.height();
-            var windowHeight = $(window).height();
-            var offset;
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
 
-            if (elHeight < windowHeight) {
-                offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
             }
-            else {
-                offset = elOffset;
-            }
 
-            $.smoothScroll({ speed: 700 }, offset);
-            return false;
+            return array;
         }
-
-
-        let ListOfMenuItems = ["MenuItem_MyFavouriteWebDevTechs",
-            "MenuItem_LabInfo",
-            "MenuItem_CourseInfo",
-            "MenuItem_UniversityInfo",
-            "MenuItem_PageInfo"];
-
-
-        let ListOfMenuItemDestinations = {};
-
-        ListOfMenuItemDestinations["MenuItem_MyFavouriteWebDevTechs"] = 'MyFavouriteWebDevTechs';
-        ListOfMenuItemDestinations["MenuItem_LabInfo"] = 'LabInfo';
-        ListOfMenuItemDestinations["MenuItem_CourseInfo"] = 'CourseInfo';
-        ListOfMenuItemDestinations["MenuItem_UniversityInfo"] = 'UniversityInfo';
-        ListOfMenuItemDestinations["MenuItem_PageInfo"] = 'PageInfo';
-
-
-        $(".navbar a").on("click", function () {
-
-
-            $(".navbar").find(".active").removeClass("active");
-            $(this).parent().addClass("active");
-
-
-        });
-
-
-
-        ListOfMenuItems.forEach(MenuItem => {
-
-            $("#" + MenuItem).click(function () {
-
-                if (MenuItem === "MenuItem_MyFavouriteWebDevTechs") {
-                    $('html,body').animate({ scrollTop: 0 }, 'slow');
-                }
-                else if (MenuItem === "MenuItem_PageInfo") {
-                    $('html,body').animate({ scrollTop: $(document).height() }, 'slow');
-                }
-                else {
-                    scrollToElement(ListOfMenuItemDestinations[MenuItem]);
-                }
-
-            });
-
-        });
-
     </script>
 
 
@@ -283,25 +253,13 @@
         let ContentList = [];
         let Template = "";
         let CurrentContentIndex = 0;
-        let TimerCounter = 0;
+        // let TimerCounter = 0;
 
         let StartShow = function () {
 
             if (ContentList.length === 0 || Template.length === 0) {
                 return;
             }
-
-
-            if (TimerCounter !== 0)
-            {
-                TimerCounter = TimerCounter - 1;
-                $("#Timer").html(TimerCounter);
-                setTimeout(function () { StartShow(); }, 1000);
-                return;
-            }
-
-            TimerCounter = 20;
-            $("#Timer").html(TimerCounter);
 
 
             let CurrentContent = ContentList[CurrentContentIndex];
@@ -320,27 +278,31 @@
                     .done(function (data) {
 
                         NewContent = NewContent.replace("{{Description}}", data);
-
-                        NewContent = NewContent.replace("{{ImageURL}}", CurrentContent.ImageURL);
-                        NewContent = NewContent.replace("{{ImageAlt}}", CurrentContent.ImageAlt);
-                        NewContent = NewContent.replace("{{Title}}", CurrentContent.Title);
                         NewContent = NewContent.replace("{{CitattionURL}}", CurrentContent.CitattionURL);
                         NewContent = NewContent.replace("{{CitationTitle}}", CurrentContent.CitationTitle);
 
-                        if ($("#WebDevTechCard")) {
-                            $("#WebDevTechCard").remove();
-                        }
+                        NewContent = NewContent.replace("{{Profession}}", CurrentContent.Profession);
+                        NewContent = NewContent.replace("{{Nationality}}", CurrentContent.Nationality);
+                        NewContent = NewContent.replace("{{Website}}", CurrentContent.Website);
+                        NewContent = NewContent.replace("{{FavouriteWorkTile}}", CurrentContent.FavouriteWorkTile);
+                        NewContent = NewContent.replace("{{FavouriteWorkURL}}", CurrentContent.FavouriteWorkURL);
 
-                        $("#MyFavouriteWebDevTechs").append(NewContent);
+                        NewContent = NewContent.replace("{{ImageURL}}", CurrentContent.ImageURL);
+                        NewContent = NewContent.replace("{{ImageAlt}}", CurrentContent.ImageAlt);
 
-                        if ((CurrentContentIndex + 1) === ContentList.length) {
-                            CurrentContentIndex = 0;
-                        }
-                        else {
+                        NewContent = NewContent.replace("{{ImageCredit}}", CurrentContent.ImageCredit);
+                        NewContent = NewContent.replace("{{ImageCreditURL}}", CurrentContent.ImageCreditURL);
+
+                        NewContent = NewContent.replace("{{Name}}", CurrentContent.Name);
+
+
+                        $("#MyFavouritePersonalities").append(NewContent);
+
+                        if ((CurrentContentIndex + 1) !== ContentList.length) {
                             CurrentContentIndex = CurrentContentIndex + 1;
+                            setTimeout(function () { StartShow(); }, 1);
                         }
 
-                        setTimeout(function () { StartShow(); }, 1000);
 
                     });
 
@@ -352,7 +314,7 @@
 
 
         $.ajax({
-            url: "content_list.json"
+            url: "JSON_Content.json"
         })
             .done(function (data) {
 
@@ -360,9 +322,11 @@
 
                     ContentList.push(item);
 
-                    StartShow();
-
                 });
+
+                shuffle(ContentList);
+
+                StartShow();
 
             });
 
@@ -374,6 +338,38 @@
                 Template = data;
 
                 StartShow();
+
+            });
+
+        $.ajax({
+            url: "Must_JSON.json"
+        })
+            .done(function (data) {
+
+                var Name = data.name;
+                $('#MusctConsumeJSONCard .JSON_Name').html(Name);
+
+                var year = data.year;
+                $('#MusctConsumeJSONCard .JSON_Year').html(year);
+
+                var imageURL = data.imageURL;
+                $('#MusctConsumeJSONCard img').attr("src", imageURL);
+
+                var Engine_type = data.engine.type;
+                $('#MusctConsumeJSONCard .JSON_Engine_type').html("Type: " + Engine_type);
+
+                var JSON_Engine_size = data.engine.size;
+                $('#MusctConsumeJSONCard .JSON_Engine_size').html("Size: " + JSON_Engine_size);
+
+                var JSON_Engine_configuration = data.engine.configuration;
+                $('#MusctConsumeJSONCard .JSON_Engine_configuration').html("Configuration: " + JSON_Engine_configuration);
+
+                var JSON_Brakes_front = data.brakes.front;
+                $('#MusctConsumeJSONCard .JSON_Brakes_front').html("Front: " + JSON_Brakes_front);
+
+                var JSON_Brakes_back = data.brakes.back;
+                $('#MusctConsumeJSONCard .JSON_Brakes_back').html("Back: " + JSON_Brakes_back);
+
 
             });
 
