@@ -1,9 +1,19 @@
 var express = require('express');
 var router = express.Router();
+var fs = require("fs");
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('This is the list books GET API endpoint');
+
+    const DataFilePath = "data/books.json";
+
+    fs.readFile(DataFilePath, function (err, data) {
+        
+      if (err) throw err;
+  
+      res.json(JSON.parse(data));
+  
+    });
+
 });
 
 module.exports = router;
