@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="col-lg-4")
+    a(href="/bookinventory/list", target="_blank")
+      button(type="submit", class="btn btn-primary", style="margin-right:10px") View Books
+
+    a(href="/bookinventory/add")
+      button(type="button", class="btn btn-success") Add a Book
