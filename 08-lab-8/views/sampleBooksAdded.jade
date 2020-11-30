@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div(class="col-lg-4")
+        div(class="alert alert-success", role="alert")
+            | Five sample books were inserted successfully.
+
+        a(href="/")
+            button(type="button", class="btn btn-secondary") Go Back to Home Page
+
+        br
+
+        a(href="/bookinventory/list", target="_blank")
+            button(type="submit", class="btn btn-primary", style="margin-right:10px") View Books (JSON)
+
+        a(href="/bookinventory/list_table")
+            button(type="submit", class="btn btn-primary", style="margin-right:10px") View Books (Table)
+
