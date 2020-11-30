@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    div(class="col-lg-4")
+        form(action="/bookinventory/add", class="text-left", method="post")
+            div(class="form-group")
+                label(for="title") Title
+                input(type="text" class="form-control" id="title" name="title")
+            div(class="form-group")
+                label(for="author") Author
+                input(type="text" class="form-control" id="author" name="author")
+            div(class="form-group")
+                label(for="publisher") Publisher
+                input(type="text" class="form-control" id="publisher" name="publisher")
+            div(class="form-group")
+                label(for="date") Date 
+                input(type="text" class="form-control" id="date" name="date")
+            div(class="form-group")
+                label(for="website") Website 
+                input(type="text" class="form-control" id="website" name="website")
+            div(class="form-group text-center")
+                button(type="submit", class="btn btn-primary", style="margin-right:10px") Add Book
+                a(href="/")
+                    button(type="button", class="btn btn-secondary") Cancel

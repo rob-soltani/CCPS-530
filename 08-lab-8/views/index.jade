@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div(class="col-lg-4")
+    a(href="/bookinventory/list", target="_blank")
+      button(type="submit", class="btn btn-primary", style="margin-right:10px") View Books (JSON)
+
+    a(href="/bookinventory/list_table")
+      button(type="submit", class="btn btn-primary", style="margin-right:10px") View Books (Table)
+
+    a(href="/bookinventory/add")
+      button(type="button", class="btn btn-success", style="margin-right:10px") Add a Book
+
+    a(href="/insertSampleBooks")
+      button(type="button", class="btn btn-success") Insert Five Sample Books
+
+    a(href="/deleteCollection")
+      button(type="button", class="btn btn-danger", style="margin-right:10px") Delete "Books" Collection
