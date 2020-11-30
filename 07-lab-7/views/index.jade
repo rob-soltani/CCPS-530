@@ -1,0 +1,78 @@
+extends layout
+
+block content
+  div(class="col-lg-4")
+
+    -if(dbExists)    
+      div(class="alert alert-secondary", role="alert") The "BooksInventory" database already exists.
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(dbCreated)    
+      div(class="alert alert-success", role="alert") The "BooksInventory" database was successfully created!
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(dbDeleted)    
+      div(class="alert alert-success", role="alert") The "BooksInventory" database was successfully deleted!
+        a(href="/") 
+          i(class="fas fa-window-close")
+          
+    -if(dbDoesNotExist)    
+      div(class="alert alert-danger", role="alert") The "BooksInventory" database does not exist!
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(collectionCreated)    
+      div(class="alert alert-success", role="alert") The "Books" collection was successfully created!
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(collectionExists)    
+      div(class="alert alert-secondary", role="alert") The "Books" collection already exists.
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(collectionDoesNotExist)    
+      div(class="alert alert-danger", role="alert") The "Books" collection does not exist.
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(collectionDeleted)    
+      div(class="alert alert-success", role="alert") The "Books" collection  was successfully deleted!
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+    -if(fiveBooksInserted)    
+      div(class="alert alert-success", role="alert") Five sample books were successfully inserted in to the "Books" collection!
+        a(href="/") 
+          i(class="fas fa-window-close")
+
+
+
+    a(href="/createDb")
+      button(type="button", class="btn btn-primary", style="margin-right:10px") Create "BooksInventory" Database
+
+    br
+
+    a(href="/deleteDb")
+      button(type="button", class="btn btn-danger", style="margin-right:10px") Delete "BooksInventory" Database
+
+    br
+
+    a(href="/createCollection")
+      button(type="button", class="btn btn-primary", style="margin-right:10px") Create "Books" Collection
+
+    br
+
+    a(href="/deleteCollection")
+      button(type="button", class="btn btn-danger", style="margin-right:10px") Delete "Books" Collection
+
+    br
+
+    a(href="/insertSampleBooks")
+      button(type="button", class="btn btn-success") Insert Five Sample Books
+
+    br
+    br
+
