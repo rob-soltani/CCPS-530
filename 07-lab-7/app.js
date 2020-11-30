@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var createDbRouter = require('./routes/createDb');
-var deleteDbRouter = require('./routes/deleteDb');
+var deleteDbRouter = require('./routes/delete_db');
 var createCollectionRouter = require('./routes/createCollection');
 var deleteCollectionRouter = require('./routes/deleteCollection');
 var insertSampleBooksRouter = require('./routes/insertSampleBooks');
