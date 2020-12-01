@@ -3,26 +3,40 @@ import * as express from 'express';
 const path = require('path');
 const cookieParser = require('cookie-parser');
 
-import HttpException from './classes/HttpException';
+import HttpException from '../classes/HttpException';
 
-var app = express();
+require('dotenv').config();
+
+// import { IIndexable } from '../intefaces/IIndexable';
+
+// const path = require('path');
+
+
+
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const FBAuth = require('./routes/auth/fbAuth');
 
 // Routers
-const signUpRouter = require('./routes/signup');
-app.use('/signup', signUpRouter);
+const signUpRouter = require('./routes/auth/signup');
+app.use('/api/signup', signUpRouter);
 
-app.get("/", function (req, res, next) {
+const signinRouter = require('./routes/auth/signin');
+app.use('/api/signin', signinRouter);
 
-    res.json({Message: 'Home'}).status(200).end();
-    return;
+const signoutRouter = require('./routes/auth/signout');
+app.use('/api/signout', signoutRouter);
 
-});
+const getLocationByIPRouter = require('./routes/getLocationByIP');
+app.use('/api/getLocationByIP', FBAuth, getLocationByIPRouter);
+
+const getLocationAutomaticallyRouter = require('./routes/getLocationAutomatically');
+app.use('/api/getLocationAutomatically', FBAuth, getLocationAutomaticallyRouter);
 
 
 // catch 404 and forward to error handler
@@ -38,7 +52,7 @@ app.use(function (err: HttpException, req: express.Request, res: express.Respons
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.json({ errorMessage: err.message, errorStatus: err.status, errorStack: err.stack });
 });
 
 module.exports = app;
