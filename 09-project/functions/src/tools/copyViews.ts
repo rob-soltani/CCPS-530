@@ -1,2 +1,0 @@
-import * as shell from "shelljs";
-shell.cp("-R", "src/express-app/views", "lib/express-app/");
