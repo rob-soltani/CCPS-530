@@ -1,6 +1,8 @@
 import * as express from 'express';
 const router = express.Router();
 
+const requestIp = require('request-ip');
+
 const { db, firebase_initializedApp } = require("../../../tools/admin");
 
 
@@ -16,12 +18,50 @@ router.post("/", function (req, res, next) {
         lastName: req.body.LastName,
         email: req.body.Email,
         password: req.body.Password,
-        confirmPassword: req.body.ConfirmPassword,
+        confirmPassword: req.body.ConfirmPassword
     };
+
+    if (!newUser.firstName.length) {
+        return res
+            .status(403)
+            .json({ error: "User first name is missing" });
+    }
+
+    if (!newUser.lastName.length) {
+        return res
+            .status(403)
+            .json({ error: "User last name is missing" });
+    }
+
+    if (!newUser.email.length) {
+        return res
+            .status(403)
+            .json({ error: "User email is missing" });
+    }
+
+    if (!newUser.password.length) {
+        return res
+            .status(403)
+            .json({ error: "User password is missing" });
+    }
+
+    if (!newUser.confirmPassword.length) {
+        return res
+            .status(403)
+            .json({ error: "User confirmed password is missing" });
+    }
+
+    if (newUser.confirmPassword !== newUser.password) {
+        return res
+            .status(403)
+            .json({ error: "User passwords do not match is missing" });
+    }
 
     const { valid, errors } = validateSignupData(newUser);
 
     if (!valid) return res.status(400).json(errors);
+
+    const IPAddress = requestIp.getClientIp(req);
 
     let token: string, userId: string;
 
@@ -29,7 +69,7 @@ router.post("/", function (req, res, next) {
         .get()
         .then((doc: any) => {
             if (doc.exists) {
-                return res.status(400).json({ email: "This email is already taken" });
+                return res.status(400).json({ error: "This email is asscociated with an existing account." });
             } else {
                 return firebase_initializedApp
                     .auth()
@@ -42,22 +82,23 @@ router.post("/", function (req, res, next) {
         })
         .then((idToken: any) => {
             token = idToken;
-            const userCredentials = {
+            const userData = {
                 email: newUser.email,
                 createdAt: new Date().toISOString(),
                 userId,
                 firstName: newUser.firstName,
                 lastName: newUser.lastName,
+                IPAddress: IPAddress
             };
-            return db.doc(`/users/${newUser.email}`).set(userCredentials);
+            return db.doc(`/users/${newUser.email}`).set(userData);
         })
         .then(() => {
-            return res.status(201).json({ token });
+            return res.status(201).json({ Token: token, FirstName: newUser.firstName, LastName: newUser.lastName, Email: newUser.email });
         })
         .catch((err: any) => {
             console.error(err);
             if (err.code === "auth/email-already-in-use") {
-                return res.status(400).json({ email: "Email is already is use" });
+                return res.status(400).json({ error: "Email is already is use" });
             } else {
                 return res
                     .status(500)
