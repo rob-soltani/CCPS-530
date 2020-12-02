@@ -16,12 +16,12 @@ router.post("/", function (req, res, next) {
 
 
     if (!(/^\d+$/.test(IPAddress.replace(/\./g, '')))) {
-        return res.status(400).json({ error: 'Invalid IP Address' })
+        return res.status(400).json({ error: 'Invalid IP Address.' })
     }
 
 
     if (!validate.ipv4(IPAddress)) {
-        return res.status(400).json({ error: 'Invalid IP Address' })
+        return res.status(400).json({ error: 'Invalid IP Address.' })
     }
 
     const IPFind_APIKey = process.env.IP_FIND_API_KEY;
@@ -41,13 +41,13 @@ router.post("/", function (req, res, next) {
             else {
                 return res
                     .status(400)
-                    .send({ error: "IPFind.com Error" });
+                    .send({ error: "IPFind.com Error." });
             }
         })
         .catch((error: any) => {
             return res
                 .status(400)
-                .send({ error: "IPFind.com Error" });
+                .send({ error: "Error connecting to IPFind.com." });
         })
 
 });

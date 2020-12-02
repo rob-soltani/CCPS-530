@@ -2,6 +2,7 @@ const createError = require('http-errors');
 import * as express from 'express';
 const path = require('path');
 const cookieParser = require('cookie-parser');
+var cors = require('cors')
 
 import HttpException from '../classes/HttpException';
 
@@ -15,6 +16,7 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
