@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./components/Dashboard";
 import SignUpForm from "./components/SignUpForm";
 import SignOut from "./components/SignOut";
-import { BrowserRouter, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -54,34 +54,36 @@ class App extends Component {
           <div className='container container-fluid'>
             <ProjectInfo name='Project - IP Geolocation' />
 
-            <Route exact path='/'>
-              {this.state.UserAuthorzationBearerToken === null ? (
-                <Redirect to='/signin' />
-              ) : null}
-            </Route>
+            <Switch>
+              <Route exact path='/'>
+                {this.state.UserAuthorzationBearerToken === null ? (
+                  <Redirect to='/signin' />
+                ) : null}
+              </Route>
 
-            <Route exact path='/signin'>
-              {this.state.UserAuthorzationBearerToken === null ? (
-                <SignInForm SignInAction={this.SignInAction} />
-              ) : null}
-            </Route>
+              <Route exact path='/signin'>
+                {this.state.UserAuthorzationBearerToken === null ? (
+                  <SignInForm SignInAction={this.SignInAction} />
+                ) : null}
+              </Route>
 
-            <Route exact path='/signout'>
-              {<SignOut SignOutAction={this.SignOutAction} />}
-            </Route>
+              <Route exact path='/signout'>
+                {<SignOut SignOutAction={this.SignOutAction} />}
+              </Route>
 
-            <Route exact path='/signup'>
-              <SignUpForm SignUpAction={this.SignUpAction} />
-            </Route>
+              <Route exact path='/signup'>
+                <SignUpForm SignUpAction={this.SignUpAction} />
+              </Route>
 
-            <Route exact path='/dashboard'>
-              <Dashboard
-                UserFirstName={this.state.UserFirstName}
-                UserAuthorzationBearerToken={
-                  this.state.UserAuthorzationBearerToken
-                }
-              />
-            </Route>
+              <Route exact path='/dashboard'>
+                <Dashboard
+                  UserFirstName={this.state.UserFirstName}
+                  UserAuthorzationBearerToken={
+                    this.state.UserAuthorzationBearerToken
+                  }
+                />
+              </Route>
+            </Switch>
 
             <Route>
               {this.state.UserAuthorzationBearerToken === null ? (
