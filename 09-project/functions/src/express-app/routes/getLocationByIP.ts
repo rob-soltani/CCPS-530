@@ -6,7 +6,7 @@ const validate = require('ip-validator');
 
 const requestIp = require('request-ip');
 
-const { db } = require("../../tools/admin");
+const { db, admin } = require("../../tools/admin");
 
 router.post("/", function (req, res, next) {
 
@@ -45,6 +45,7 @@ router.post("/", function (req, res, next) {
                     IPAddress: IPAddress,
                     RequestingIPAddress: RequestingIPAddress,
                     APIData: AxiosRes.data,
+                    Timestamp: admin.firestore.Timestamp.now()
                 })
                 .then(() => {
                     return res
