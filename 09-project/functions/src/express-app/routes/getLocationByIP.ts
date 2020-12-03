@@ -45,7 +45,7 @@ router.post("/", function (req, res, next) {
                     IPAddress: IPAddress,
                     RequestingIPAddress: RequestingIPAddress,
                     APIData: AxiosRes.data,
-                    Timestamp: admin.firestore.Timestamp.now()
+                    Timestamp: admin.firestore.Timestamp.now(),
                 })
                 .then(() => {
                     return res
