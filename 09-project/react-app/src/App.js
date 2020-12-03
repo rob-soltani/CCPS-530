@@ -11,9 +11,7 @@ import SignUpForm from "./components/SignUpForm";
 import SignOut from "./components/SignOut";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { connect } from "react-redux";
-import { SetUserInfo } from './store/actionCreators/UserInfoActions';
-
-
+import { SetUserInfo } from "./store/actionCreators/UserInfoActions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -73,10 +71,7 @@ class App extends Component {
               </Route>
 
               <Route exact path='/dashboard'>
-                <Dashboard
-                  UserFirstName={this.props.FirstName}
-                  UserAuthorzationBearerToken={this.props.Token}
-                />
+                <Dashboard />
               </Route>
             </Switch>
 
@@ -109,8 +104,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    SetUserInfo: (UserInfo) =>
-      dispatch(SetUserInfo(UserInfo)),
+    SetUserInfo: (UserInfo) => dispatch(SetUserInfo(UserInfo)),
   };
 };
 

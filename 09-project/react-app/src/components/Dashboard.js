@@ -4,6 +4,7 @@ import GoogleMap from "./Dashboard/GoogleMap";
 import SearchBox from "./Dashboard/SearchBox";
 import MapInfo from "./Dashboard/MapInfo";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 class Dashboard extends Component {
   state = {
@@ -71,6 +72,7 @@ class Dashboard extends Component {
   };
 
   ClearIP = () => {
+    alert(this.props.Token);
     this.setState({
       IP: null,
     });
@@ -81,11 +83,11 @@ class Dashboard extends Component {
       <div className='container container-fluid'>
         <div className='row justify-content-lg-center'>
           <div className='col-lg-12'>
-            <h4>Welcome {this.props.UserFirstName}!</h4>
+            <h4>Welcome {this.props.FirstName}!</h4>
             <br />
             <SearchBox
               UserAuthorzationBearerToken={
-                this.props.UserAuthorzationBearerToken
+                this.props.Token
               }
               DisplayMap={this.DisplayMap}
               ClearIP={this.ClearIP}
@@ -95,7 +97,7 @@ class Dashboard extends Component {
               this.state.IP.length ? (
                 <GoogleMap
                   UserAuthorzationBearerToken={
-                    this.props.UserAuthorzationBearerToken
+                    this.props.Token
                   }
                   center={this.state.center}
                   zoom={11}
@@ -142,4 +144,11 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    Token: state.UserInfo.Token,
+    FirstName: state.UserInfo.FirstName,
+  };
+};
+
+export default connect(mapStateToProps)(Dashboard);
