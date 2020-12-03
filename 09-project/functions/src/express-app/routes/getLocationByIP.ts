@@ -4,9 +4,15 @@ const axios = require('axios');
 
 const validate = require('ip-validator');
 
+const requestIp = require('request-ip');
+
+const { db } = require("../../tools/admin");
+
 router.post("/", function (req, res, next) {
 
     if (!req.User) return res.status(403).json({ error: 'Unauthorized' });
+
+    const RequestingIPAddress = requestIp.getClientIp(req) || '0.0.0.0';
 
     const IPAddress = req.body.IPAddress;
 
@@ -34,9 +40,18 @@ router.post("/", function (req, res, next) {
             const statusCode = AxiosRes.status;
 
             if (statusCode === 200) {
-                return res
+
+                db.collection("users").doc(req.User.Email).collection("requests").add({
+                    IPAddress: IPAddress,
+                    RequestingIPAddress: RequestingIPAddress,
+                    APIData: AxiosRes.data
+                })
+                .then(() => {
+                    return res
                     .status(200)
                     .send(AxiosRes.data);
+                })                       
+
             }
             else {
                 return res

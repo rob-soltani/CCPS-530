@@ -8,7 +8,7 @@ class Footer extends Component {
           <div className='col-lg-12'>
             <hr />
             <div id='footer-area'>
-              App last updated on December 2<sup>nd</sup>, 2020, by Rob Soltani
+              App last updated on December 3<sup>rd</sup>, 2020, by Rob Soltani
             </div>
           </div>
         </div>
