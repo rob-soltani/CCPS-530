@@ -10,8 +10,10 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "google-map-react": "^2.1.9",
+    "ip-validator": "0.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"

@@ -45,9 +45,18 @@ router.post("/", function (req, res, next) {
             }
         })
         .catch((error: any) => {
-            return res
-                .status(400)
-                .send({ error: "Error connecting to IPFind.com." });
+
+            if (error.response.data.error) {
+                return res
+                    .status(400)
+                    .json({ error: error.response.data.error });
+            }
+            else {
+                return res
+                    .status(400)
+                    .json({ error: "Error connecting to IPFind.com." });
+            }
+
         })
 
 });
