@@ -47,6 +47,7 @@ class App extends Component {
     const MainDomain = "https://project.ccps530.ru.rob.soltani.io";
 
     if (CurrentURL.length < 41) {
+      console.log(1);
       window.location.href = MainDomain;
       return;
     }
@@ -54,7 +55,9 @@ class App extends Component {
     const First41Letters = CurrentURL.substring(0, 41);
 
     if (First41Letters !== MainDomain) {
+      console.log(2);
       window.location.href = MainDomain;
+      return;
     }
   };
 

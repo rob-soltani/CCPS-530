@@ -72,7 +72,6 @@ class Dashboard extends Component {
   };
 
   ClearIP = () => {
-    alert(this.props.Token);
     this.setState({
       IP: null,
     });
