@@ -12,7 +12,7 @@ class SignUpForm extends Component {
     Password: "",
     ConfirmPassword: "",
     PaswordsMatch: false,
-    Disabled: false,
+    Disabled: true,
     error: "",
     GoogleReCaptchaSiteKey: "",
     CaptchaValue: "",
@@ -157,6 +157,7 @@ class SignUpForm extends Component {
       .then((res) => {
         this.setState({
           GoogleReCaptchaSiteKey: res.data.GoogleReCaptchaSiteKey,
+          Disabled: false,
         });
       })
       .catch((err) => {

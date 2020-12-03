@@ -8,7 +8,7 @@ class SignInForm extends Component {
   state = {
     Email: "",
     Password: "",
-    Disabled: false,
+    Disabled: true,
     error: "",
     GoogleReCaptchaSiteKey: "",
     CaptchaValue: "",
@@ -105,6 +105,7 @@ class SignInForm extends Component {
       .then((res) => {
         this.setState({
           GoogleReCaptchaSiteKey: res.data.GoogleReCaptchaSiteKey,
+          Disabled: false,
         });
       })
       .catch((err) => {
