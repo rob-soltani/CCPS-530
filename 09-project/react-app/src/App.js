@@ -12,7 +12,6 @@ import SignOut from "./components/SignOut";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { SetUserInfo } from "./store/actionCreators/UserInfoActions";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
@@ -43,6 +42,22 @@ class App extends Component {
     });
   };
 
+  RedirectToMainDomain = () => {
+    const CurrentURL = window.location.href;
+    const MainDomain = "https://project.ccps530.ru.rob.soltani.io";
+
+    if (CurrentURL.length < 41) {
+      window.location.href = MainDomain;
+      return;
+    }
+
+    const First41Letters = CurrentURL.substring(0, 41);
+
+    if (First41Letters !== MainDomain) {
+      window.location.href = MainDomain;
+    }
+  };
+
   render() {
     return (
       <BrowserRouter>
@@ -50,6 +65,8 @@ class App extends Component {
           <BackToCCPS530 />
           <div className='container container-fluid'>
             <ProjectInfo name='Project - IP Geolocation' />
+
+            {this.RedirectToMainDomain()}
 
             <Switch>
               <Route exact path='/'>
