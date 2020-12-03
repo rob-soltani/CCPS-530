@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 class SignUpForm extends Component {
   state = {
@@ -13,6 +14,8 @@ class SignUpForm extends Component {
     PaswordsMatch: false,
     Disabled: false,
     error: "",
+    GoogleReCaptchaSiteKey: "",
+    CaptchaValue: "",
   };
 
   handlechange = (e) => {
@@ -40,6 +43,47 @@ class SignUpForm extends Component {
     if (Disabled) {
       return;
     }
+
+    if (!this.state.FirstName.length) {
+      this.setState({
+        error: "Please enter your first name.",
+        Disabled: false,
+      });
+      return;
+    }
+
+    if (!this.state.LastName.length) {
+      this.setState({
+        error: "Please enter your last name.",
+        Disabled: false,
+      });
+      return;
+    }
+
+    if (!this.state.Email.length) {
+      this.setState({
+        error: "Please enter your email.",
+        Disabled: false,
+      });
+      return;
+    }
+
+    if (!this.state.Password.length) {
+      this.setState({
+        error: "Please enter your password.",
+        Disabled: false,
+      });
+      return;
+    }
+
+    if (!this.state.Password.length) {
+      this.setState({
+        error: "Please confirm your password.",
+        Disabled: false,
+      });
+      return;
+    }
+
     if (this.state.PaswordsMatch === false) {
       this.setState({
         error: "Passwords do not match",
@@ -48,6 +92,12 @@ class SignUpForm extends Component {
       this.setState({
         error: "Password must be at least 6 characters long.",
       });
+    } else if (!this.state.CaptchaValue.length) {
+      this.setState({
+        error: "Please solve the captcha.",
+        Disabled: false,
+      });
+      return;
     } else {
       this.setState(
         {
@@ -90,6 +140,33 @@ class SignUpForm extends Component {
     }
   };
 
+  ReCAPTCHA_Change = (value) => {
+    this.setState({
+      CaptchaValue: value,
+    });
+  };
+
+  componentDidMount() {
+    axios({
+      method: "post",
+      url: "/api/getGoogleReCaptchaSiteKey",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        this.setState({
+          GoogleReCaptchaSiteKey: res.data.GoogleReCaptchaSiteKey,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          error: "Failed to fetch ReCaptcha Site Key",
+          Disabled: true,
+        });
+      });
+  }
+
   render() {
     return (
       <div className='container container-fluid'>
@@ -100,7 +177,7 @@ class SignUpForm extends Component {
           </div>
         </div>
         <div className='row justify-content-lg-center'>
-          <div className='col-lg-4'>
+          <div className='col-lg-5'>
             <div className='app-content'>
               <form onSubmit={this.handleSubmit}>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -115,6 +192,7 @@ class SignUpForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete='on'
                   />
                 </div>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -129,6 +207,7 @@ class SignUpForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete='on'
                   />
                 </div>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -143,6 +222,7 @@ class SignUpForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete='on'
                   />
                 </div>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -157,6 +237,7 @@ class SignUpForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete='off'
                   />
                 </div>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -174,12 +255,33 @@ class SignUpForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete='off'
                   />
                 </div>
                 <div
+                  className='form-group'
+                  style={{
+                    textAlign: "center",
+                    maxWidth: "304px",
+                    margin: "auto",
+                    padding: "5px",
+                  }}
+                >
+                  {this.state.GoogleReCaptchaSiteKey ? (
+                    this.state.GoogleReCaptchaSiteKey.length ? (
+                      <ReCAPTCHA
+                        sitekey={this.state.GoogleReCaptchaSiteKey}
+                        onChange={this.ReCAPTCHA_Change}
+                      />
+                    ) : null
+                  ) : null}
+                </div>
+                <div
                   className={`${
-                    this.state.error.length
-                      ? "alert alert-danger visible"
+                    this.state.error
+                      ? this.state.error.length
+                        ? "alert alert-danger visible"
+                        : "invisible"
                       : "invisible"
                   }`}
                   role='alert'

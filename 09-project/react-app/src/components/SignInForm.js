@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 class SignInForm extends Component {
   state = {
     Email: "",
@@ -144,6 +143,7 @@ class SignInForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete="on"
                   />
                 </div>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -159,6 +159,7 @@ class SignInForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
+                    autoComplete="on"
                   />
                 </div>
                 <div
@@ -181,9 +182,11 @@ class SignInForm extends Component {
                 </div>
                 <div
                   className={`${
-                    this.state.error.length
+                    this.state.error
+                    ? this.state.error.length
                       ? "alert alert-danger visible"
                       : "invisible"
+                    : "invisible"
                   }`}
                   role='alert'
                 >
@@ -195,6 +198,7 @@ class SignInForm extends Component {
                     className='btn btn-primary'
                     style={{ margin: "5px" }}
                     disabled={this.state.Disabled}
+              
                   >
                     Sign In
                   </button>
@@ -204,6 +208,7 @@ class SignInForm extends Component {
                       className='btn btn-success'
                       style={{ margin: "5px" }}
                       disabled={this.state.Disabled}
+                
                     >
                       Sign Up
                     </button>

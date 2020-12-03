@@ -98,7 +98,7 @@ class Dashboard extends Component {
                     this.props.UserAuthorzationBearerToken
                   }
                   center={this.state.center}
-                  zoom={13}
+                  zoom={11}
                 />
               ) : null
             ) : null}
