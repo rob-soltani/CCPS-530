@@ -44,7 +44,7 @@ router.post("/", function (req, res, next) {
                 db.collection("users").doc(req.User.Email).collection("requests").add({
                     IPAddress: IPAddress,
                     RequestingIPAddress: RequestingIPAddress,
-                    APIData: AxiosRes.data
+                    APIData: AxiosRes.data,
                 })
                 .then(() => {
                     return res

@@ -2,7 +2,7 @@ const createError = require('http-errors');
 import * as express from 'express';
 const path = require('path');
 const cookieParser = require('cookie-parser');
-var cors = require('cors')
+var cors = require('cors');
 
 import HttpException from '../classes/HttpException';
 

@@ -18,7 +18,7 @@ router.post("/", function (req, res, next) {
         lastName: req.body.LastName,
         email: req.body.Email,
         password: req.body.Password,
-        confirmPassword: req.body.ConfirmPassword
+        confirmPassword: req.body.ConfirmPassword,
     };
 
     if (!newUser.firstName.length) {
@@ -88,7 +88,7 @@ router.post("/", function (req, res, next) {
                 userId,
                 firstName: newUser.firstName,
                 lastName: newUser.lastName,
-                IPAddress: IPAddress
+                IPAddress: IPAddress,
             };
             return db.doc(`/users/${newUser.email}`).set(userData);
         })
