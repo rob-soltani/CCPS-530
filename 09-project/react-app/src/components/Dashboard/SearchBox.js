@@ -191,7 +191,7 @@ class SearchBox extends Component {
             style={{ margin: "2px" }}
             onClick={this.handleUseYourIP}
           >
-            User Your IP
+            Use Your IP
           </button>
           <button
             type='button'
