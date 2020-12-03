@@ -7,28 +7,25 @@ const Marker = () => {
   return (
     <div>
       <div
-         style={{
-          height: "40px",
-          width: "40px",
-
-        }}
-      >
-      <div
         style={{
           height: "40px",
           width: "40px",
-          backgroundImage: "url('/images/marker.png')",
-          backgroundRepeat: "no-repeat",
-          // backgroundAttachment: "fixed",
-          backgroundPosition: 'center',
-          backgroundSize: '40px 40px',
-          position: 'relative',
-          left: '-20px',
-          top: '-40px',
         }}
       >
-        
-      </div>
+        <div
+          style={{
+            height: "40px",
+            width: "40px",
+            backgroundImage: "url('/images/marker.png')",
+            backgroundRepeat: "no-repeat",
+            // backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            backgroundSize: "40px 40px",
+            position: "relative",
+            left: "-20px",
+            top: "-40px",
+          }}
+        ></div>
       </div>
     </div>
   );

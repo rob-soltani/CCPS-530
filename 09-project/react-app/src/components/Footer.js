@@ -11,7 +11,7 @@ class Footer extends Component {
               App last updated on December 2<sup>nd</sup>, 2020, by Rob Soltani
             </div>
           </div>
-        </div>        
+        </div>
       </>
     );
   }

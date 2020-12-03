@@ -1,13 +1,11 @@
-
 import React, { Component } from "react";
 
 class BackToCCPS530 extends Component {
-
   render() {
     return (
       <>
         <a href='https://ccps530.ru.rob.soltani.io/'>
-        &lt;- Back to CCPS 530's Homepage
+          &lt;- Back to CCPS 530's Homepage
         </a>
         <hr />
       </>
@@ -16,4 +14,3 @@ class BackToCCPS530 extends Component {
 }
 
 export default BackToCCPS530;
-

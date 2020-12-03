@@ -12,9 +12,8 @@ const MapInfo = ({
   PostalCode,
   Currency,
   Languages,
-  Timezone
+  Timezone,
 }) => {
-
   const DisplayedLanguages = Languages.length ? Languages.join(", ") : "-";
 
   return (

@@ -144,7 +144,7 @@ class SignInForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
-                    autoComplete="on"
+                    autoComplete='on'
                   />
                 </div>
                 <div className='form-group' style={{ textAlign: "left" }}>
@@ -160,7 +160,7 @@ class SignInForm extends Component {
                     required={true}
                     onChange={this.handlechange}
                     disabled={this.state.Disabled}
-                    autoComplete="on"
+                    autoComplete='on'
                   />
                 </div>
                 <div
@@ -184,10 +184,10 @@ class SignInForm extends Component {
                 <div
                   className={`${
                     this.state.error
-                    ? this.state.error.length
-                      ? "alert alert-danger visible"
+                      ? this.state.error.length
+                        ? "alert alert-danger visible"
+                        : "invisible"
                       : "invisible"
-                    : "invisible"
                   }`}
                   role='alert'
                 >
@@ -199,7 +199,6 @@ class SignInForm extends Component {
                     className='btn btn-primary'
                     style={{ margin: "5px" }}
                     disabled={this.state.Disabled}
-              
                   >
                     Sign In
                   </button>
@@ -209,7 +208,6 @@ class SignInForm extends Component {
                       className='btn btn-success'
                       style={{ margin: "5px" }}
                       disabled={this.state.Disabled}
-                
                     >
                       Sign Up
                     </button>

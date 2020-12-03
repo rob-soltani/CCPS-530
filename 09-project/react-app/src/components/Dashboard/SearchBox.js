@@ -147,11 +147,14 @@ class SearchBox extends Component {
   handleClear = (e) => {
     e.preventDefault();
 
-    this.setState({
-      IPAddress: "",
-    }, function () {
-      this.props.ClearIP();
-    });
+    this.setState(
+      {
+        IPAddress: "",
+      },
+      function () {
+        this.props.ClearIP();
+      }
+    );
   };
 
   render() {
@@ -181,7 +184,7 @@ class SearchBox extends Component {
           >
             Look Up IP Location
           </button>
-           <button
+          <button
             type='button'
             className='btn btn-primary mb-2'
             disabled={this.state.Disabled}
@@ -189,7 +192,7 @@ class SearchBox extends Component {
             onClick={this.handleUseYourIP}
           >
             User Your IP
-          </button> 
+          </button>
           <button
             type='button'
             className='btn btn-danger mb-2'

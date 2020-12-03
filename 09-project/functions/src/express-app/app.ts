@@ -8,12 +8,6 @@ import HttpException from '../classes/HttpException';
 
 require('dotenv').config();
 
-// import { IIndexable } from '../intefaces/IIndexable';
-
-// const path = require('path');
-
-
-
 const app = express();
 
 app.use(cors());
@@ -45,7 +39,6 @@ app.use('/api/getGoogleMapsAPIKey', FBAuth, getGoogleMapsAPIKeyRouter);
 
 const getGoogleReCaptchaSiteKeyRouter = require('./routes/getGoogleReCaptchaSiteKey');
 app.use('/api/getGoogleReCaptchaSiteKey', getGoogleReCaptchaSiteKeyRouter);
-
 
 
 // catch 404 and forward to error handler
