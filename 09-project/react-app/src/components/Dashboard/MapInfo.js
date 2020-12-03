@@ -12,6 +12,7 @@ const MapInfo = ({
   PostalCode,
   Currency,
   Languages,
+  Timezone
 }) => {
 
   const DisplayedLanguages = Languages.length ? Languages.join(", ") : "-";
@@ -20,7 +21,7 @@ const MapInfo = ({
     <div>
       <form style={{ textAlign: "left" }}>
         <div className='form-row'>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Longitude'>Longitude</label>
               <input
@@ -32,7 +33,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Latitude'>Latitude</label>
               <input
@@ -44,7 +45,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Continent'>Continent</label>
               <input
@@ -56,7 +57,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Country'>Country</label>
               <input
@@ -68,7 +69,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Region'>Region</label>
               <input
@@ -80,7 +81,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='County'>County</label>
               <input
@@ -92,7 +93,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='City'>City</label>
               <input
@@ -104,7 +105,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='PostalCode'>Postal Code</label>
               <input
@@ -116,7 +117,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Currency'>Currency</label>
               <input
@@ -128,7 +129,7 @@ const MapInfo = ({
               />
             </div>
           </div>
-          <div className='col'>
+          <div className='col-lg-2'>
             <div className='form-group'>
               <label htmlFor='Languages'>Languages</label>
               <input
@@ -136,6 +137,18 @@ const MapInfo = ({
                 className='form-control'
                 id='Languages'
                 value={DisplayedLanguages}
+                readOnly
+              />
+            </div>
+          </div>
+          <div className='col-lg-2'>
+            <div className='form-group'>
+              <label htmlFor='Timezone'>Timezone</label>
+              <input
+                type='text'
+                className='form-control'
+                id='Timezone'
+                value={Timezone}
                 readOnly
               />
             </div>

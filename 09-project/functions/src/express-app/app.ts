@@ -37,8 +37,15 @@ app.use('/api/signout', signoutRouter);
 const getLocationByIPRouter = require('./routes/getLocationByIP');
 app.use('/api/getLocationByIP', FBAuth, getLocationByIPRouter);
 
-const getLocationAutomaticallyRouter = require('./routes/getLocationAutomatically');
-app.use('/api/getLocationAutomatically', FBAuth, getLocationAutomaticallyRouter);
+const getMyIPRouter = require('./routes/getMyIP');
+app.use('/api/getMyIP', FBAuth, getMyIPRouter);
+
+const getGoogleMapsAPIKeyRouter = require('./routes/getGoogleMapsAPIKey');
+app.use('/api/getGoogleMapsAPIKey', FBAuth, getGoogleMapsAPIKeyRouter);
+
+const getGoogleReCaptchaSiteKeyRouter = require('./routes/getGoogleReCaptchaSiteKey');
+app.use('/api/getGoogleReCaptchaSiteKey', getGoogleReCaptchaSiteKeyRouter);
+
 
 
 // catch 404 and forward to error handler
