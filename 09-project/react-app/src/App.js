@@ -1,8 +1,9 @@
 import "./App.css";
 import React, { Component } from "react";
 import BackToCCPS530 from "./components/BackToCCPS530";
-import ProjectInfo from "./components/ProjectInfo";
+import ProjectName from "./components/ProjectName";
 import SignInForm from "./components/SignInForm";
+import ProjectInfo from "./components/ProjectInfo";
 import CourseInfo from "./components/CourseInfo";
 import UniversityInfo from "./components/UniversityInfo";
 import Footer from "./components/Footer";
@@ -45,15 +46,12 @@ class App extends Component {
   RedirectToMainDomain = () => {
     const CurrentURL = window.location.href;
     const MainDomain = "https://project.ccps530.ru.rob.soltani.io";
-
     if (CurrentURL.length < 41) {
       console.log(1);
       window.location.href = MainDomain;
       return;
     }
-
     const First41Letters = CurrentURL.substring(0, 41);
-
     if (First41Letters !== MainDomain) {
       console.log(2);
       window.location.href = MainDomain;
@@ -67,7 +65,7 @@ class App extends Component {
         <div className='App'>
           <BackToCCPS530 />
           <div className='container container-fluid'>
-            <ProjectInfo name='Project - IP Geolocation' />
+            <ProjectName />
 
             {this.RedirectToMainDomain()}
 
@@ -103,6 +101,7 @@ class App extends Component {
               )}
             </Route>
 
+            <ProjectInfo name='Project - IP Geolocation' />
             <CourseInfo />
             <UniversityInfo />
             <Footer />

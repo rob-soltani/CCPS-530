@@ -7,25 +7,25 @@ class UniversityInfo extends Component {
         <div id='UniversityInfo' className='row'>
           <div className='col-lg-12'>
             <hr />
-            <h3 className='font-weight-bold'>
+            <h5 className='font-weight-bold'>
               University and Program Information
-            </h3>
+            </h5>
           </div>
           <div className='col-lg-12'>
             <div className='text-center'>
               <img
                 src='/images/Ryerson-rgb.png'
                 alt='Ryerson University Logo'
+                style={{ width: "150px", height: "72px"}}
               />
-              <h4 className='font-weight-bold'>
-                <br />
-                Faculty of Science
-                <br />
-                Computer Science Department
-                <br />
-                Undergraduate Program
-                <br />
-              </h4>
+              <br />
+              <br />
+              <strong>Faculty of Science</strong>
+              <br />
+              <strong>Computer Science Department</strong>
+              <br />
+              <strong>Undergraduate Program</strong>
+              <br />
             </div>
           </div>
         </div>

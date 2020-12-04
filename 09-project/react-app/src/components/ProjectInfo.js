@@ -4,6 +4,7 @@ const ProjectInfo = ({ name }) => {
       <div id='LabInfo' className='row'>
         <div className='col-lg-12'>
           <div id='lab-into-area'>
+            <hr />
             <h5 className='font-weight-bold'>
               <a href='https://rob.soltani.io'>Rob (Sohrab) Soltani</a>
             </h5>
@@ -15,12 +16,11 @@ const ProjectInfo = ({ name }) => {
             >
               <img
                 src='/images/GitHub-BW-80x80.png'
-                style={{ width: "50px", height: "50px" }}
+                style={{ width: "25px", height: "25px" }}
                 alt='GitHub Logo'
               />
             </a>
           </div>
-          <hr />
         </div>
       </div>
     </>

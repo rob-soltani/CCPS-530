@@ -7,11 +7,11 @@ class CourseInfo extends Component {
         <div id='CourseInfo' className='row'>
           <div className='col-lg-12'>
             <hr />
-            <h3 className='font-weight-bold'>Course Information</h3>
+            <h5 className='font-weight-bold'>Course Information</h5>
           </div>
           <div className='col-lg-12'>
             <div className='text-center'>
-              <h4 className='font-weight-bold'>
+              <h5 className='font-weight-bold'>
                 CCPS 530 - Web Systems Development - Fall 2020
                 <br />
                 Instructor:&nbsp;
@@ -23,7 +23,7 @@ class CourseInfo extends Component {
                 >
                   <span>G</span>hassem<span> T</span>ofighi
                 </a>
-              </h4>
+              </h5>
             </div>
           </div>
         </div>
