@@ -19,14 +19,14 @@ https://project.ccps530.ru.rob.soltani.io
 
 
 ### Resources
-## Build an app with React, Redux and Firestore from scratch
+#### Build an app with React, Redux and Firestore from scratch
 https://www.udemy.com/course/build-an-app-with-react-redux-and-firestore-from-scratch/
 
-## Complete React Tutorial (& Redux)
+#### Complete React Tutorial (& Redux)
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
 
-## Full Stack React & Firebase Tutorial Series
+#### Full Stack React & Firebase Tutorial Series
 https://www.youtube.com/playlist?list=PLMhAeHCz8S38ryyeMiBPPUnFAiWnoPvWP
 
-## Pro React 16
+#### Pro React 16
 https://www.amazon.ca/Pro-React-16-Adam-Freeman/dp/1484244508
